@@ -23,8 +23,12 @@ library(readr)
 library(factoextra)
 library(Rtsne)
 
-library(caret)
-
+library(rvest)
+library(zoo)
+library(xts)
+library(PerformanceAnalytics)
+library(tseries)
+library(fontawesome)
 
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
@@ -70,7 +74,10 @@ liste_menuitems <- append(liste_menuitems, list(
   menuItem("Credit Scoring App", tabName = "tabItem_credit_scoring", icon = icon("file-invoice-dollar"))
 ), after = length(liste_menuitems))
 
-
+# Add a new menuItem for "Portfolio Optimization"
+liste_menuitems <- append(liste_menuitems, list(
+  menuItem("Portfolio Optimization App", tabName = "tabItem_portfolio_optimization", icon = icon("balance-scale"))
+), after = length(liste_menuitems))
 
 
 # Source ui files
