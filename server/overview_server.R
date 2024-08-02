@@ -75,9 +75,16 @@ output$revenue_ratings_country_plot <- renderPlotly({
             "
   revenue_ratings_country <- execute_query(query) %>% 
     mutate(average_rating = round(average_rating, 2))
-  plot_ly(revenue_ratings_country, labels = ~country, values = ~revenue, type = 'pie', textinfo = 'label+percent',
-          hoverinfo = 'text', text = ~paste("Revenue:", revenue, "<br>Avg Rating:", average_rating)) %>%
-    layout(title = "Revenue & Average Rating Distribution by Country")
+  # plot_ly(revenue_ratings_country, labels = ~country, values = ~revenue, type = 'pie', textinfo = 'label+percent',
+  #         hoverinfo = 'text', text = ~paste("Revenue:", revenue, "<br>Avg Rating:", average_rating)) %>%
+  #   layout(title = "Revenue & Average Rating Distribution by Country")
+  # Creating a horizontal bar chart
+  plot_ly(revenue_ratings_country, x = ~revenue, y = ~country, type = 'bar', orientation = 'h',
+          text = ~paste("Revenue: $", revenue, "<br>Avg Rating: ", average_rating),
+          hoverinfo = 'text') %>%
+    layout(title = "Revenue & Average Rating Distribution by Country",
+           xaxis = list(title = "Revenue"),
+           yaxis = list(title = "Country", automargin = TRUE))  # automargin ensures labels fit within the plot
 })
 
 

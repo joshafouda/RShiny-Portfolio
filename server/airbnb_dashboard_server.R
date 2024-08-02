@@ -1,18 +1,6 @@
 
 # Ajouter les sorties ici
 
-newyork <- read.csv('data/new_york.csv')
-sanfrancisco <- read.csv('data/san_francisco.csv')
-amsterdam <- read.csv('data/amsterdam.csv')
-
-newyork <- newyork %>%
-  mutate(price = as.numeric(str_replace_all(price, ",", "")))
-
-# Convert prices to numeric (assuming price column might have "$" or commas)
-# newyork$price <- as.numeric(gsub("[,$]", "", newyork$price))
-# sanfrancisco$price <- as.numeric(gsub("[,$]", "", sanfrancisco$price))
-# amsterdam$price <- as.numeric(gsub("[,$]", "", amsterdam$price))
-
 # Filter data based on selected neighbourhood in New York
 nyc_filtered <- reactive({
   newyork %>% filter(neighbourhood == input$quartier)
@@ -25,6 +13,14 @@ output$nyc_map <- renderLeaflet({
     addMarkers()
 })
 
+output$nyc_quartier_avg_price <- renderValueBox({
+  valueBox(
+    value = paste(round(mean(nyc_filtered()$price), 1), "$"),
+    subtitle = " ", 
+    icon = icon("money-bill-wave"), 
+    color = "purple"
+  )
+})
 
 # Render the average price plot for New York
 output$nyc_price_chart <- renderPlotly({
@@ -55,7 +51,8 @@ output$sf_quartier_avg_price <- renderValueBox({
     value = paste(round(mean(san_filtered()$price), 1), "$"),
     # value = prettyNum(mean(san_filtered()$price)),
     subtitle = " ", 
-    icon = icon("money-bill-wave"), color = "blue"
+    icon = icon("money-bill-wave"), 
+    color = "purple"
   )
 })
 
@@ -80,6 +77,15 @@ output$ams_map <- renderLeaflet({
   leaflet(data = ams_filtered()) %>%
     addTiles() %>%
     addMarkers()
+})
+
+output$ams_quartier_avg_price <- renderValueBox({
+  valueBox(
+    value = paste(round(mean(ams_filtered()$price), 1), "$"),
+    subtitle = " ", 
+    icon = icon("money-bill-wave"), 
+    color = "purple"
+  )
 })
 
 output$ams_price_chart <- renderPlotly({

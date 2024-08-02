@@ -11,26 +11,15 @@ liste_tabitems <- append(liste_tabitems, list(
       tabsetPanel(
         tabPanel("New York", icon = icon("city"),
                  fluidRow(
-                   column(8,  # 2/3 of the width for the map
-                          box(
-                            title = "Map of Airbnb Locations", 
-                            status = "primary", 
-                            solidHeader = TRUE, 
-                            collapsible = TRUE,
-                            selectInput("quartier", "Choisis un quartier", choices = unique(newyork$neighbourhood)),
-                            # leafletOutput("nyc_map", height = "600px")
-                            leafletOutput("nyc_map")
-                          )
-                   ),
-                   column(4,  # 1/3 of the width for the bar chart
-                          box(
-                            title = "Average Price by Room Type", 
-                            status = "info", 
-                            solidHeader = TRUE, 
-                            collapsible = TRUE,
-                            # plotlyOutput("nyc_price_chart", height = "600px")
-                            plotlyOutput("nyc_price_chart")
-                          )
+                   box(width = 12, selectInput("quartier", "Choisis un quartier", choices = unique(newyork$neighbourhood))),
+                   box(width = 7, title = "Emplacements des logements Airbnb", 
+                       status = "primary", solidHeader = TRUE, leafletOutput("nyc_map", height = "690px")),
+                   box(width = 5, 
+                       fluidRow(box(width = 12, title = "Prix moyen ($) d’un Airbnb dans ce quartier", 
+                                    status = "primary", solidHeader = TRUE, valueBoxOutput("nyc_quartier_avg_price", width = 12))), 
+                       br(),
+                       fluidRow(box(width = 12, title = "Prix moyen ($) d’un Airbnb par type de logement dans ce quartier", 
+                                    status = "primary", solidHeader = TRUE, plotlyOutput("nyc_price_chart", height = "450px")))
                    )
                  )
         ),
@@ -50,11 +39,16 @@ liste_tabitems <- append(liste_tabitems, list(
         ),
         tabPanel("Amsterdam", icon = icon("city"),
                  fluidRow(
-                   box(selectInput("quartier_ams", "Choisis un quartier", choices = unique(amsterdam$neighbourhood))),
-                   box(width = 12, leafletOutput("ams_map"))
-                 ),
-                 fluidRow(
-                   box(width = 6, plotlyOutput("ams_price_chart"))
+                   box(width = 12, selectInput("quartier_ams", "Choisis un quartier", choices = unique(amsterdam$neighbourhood))),
+                   box(width = 7, title = "Emplacements des logements Airbnb", 
+                       status = "primary", solidHeader = TRUE, leafletOutput("ams_map", height = "690px")),
+                   box(width = 5, 
+                       fluidRow(box(width = 12, title = "Prix moyen ($) d’un Airbnb dans ce quartier", 
+                                    status = "primary", solidHeader = TRUE, valueBoxOutput("ams_quartier_avg_price", width = 12))), 
+                       br(),
+                       fluidRow(box(width = 12, title = "Prix moyen ($) d’un Airbnb par type de logement dans ce quartier", 
+                                    status = "primary", solidHeader = TRUE, plotlyOutput("ams_price_chart", height = "450px")))
+                   )
                  )
         )
       )
