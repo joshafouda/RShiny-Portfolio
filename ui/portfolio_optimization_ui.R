@@ -1,3 +1,4 @@
+linebreaks <- function(n){HTML(strrep(br(), n))}
 
 # identification interne tabItem (ne pas modifier)
 nom_tab <- "tabItem_portfolio_optimization"

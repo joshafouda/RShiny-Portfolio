@@ -30,6 +30,8 @@ library(PerformanceAnalytics)
 library(tseries)
 library(fontawesome)
 
+library(leaflet)
+
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
 for (fichierFunction in liste_functions) {
@@ -77,6 +79,11 @@ liste_menuitems <- append(liste_menuitems, list(
 # Add a new menuItem for "Portfolio Optimization"
 liste_menuitems <- append(liste_menuitems, list(
   menuItem("Portfolio Optimization App", tabName = "tabItem_portfolio_optimization", icon = icon("balance-scale"))
+), after = length(liste_menuitems))
+
+# Add a new menuItem for "Airbnb Business Dashboard"
+liste_menuitems <- append(liste_menuitems, list(
+  menuItem("Airbnb Business Dashboard", tabName = "tabItem_airbnb_dashboard", icon = icon("home"))
 ), after = length(liste_menuitems))
 
 

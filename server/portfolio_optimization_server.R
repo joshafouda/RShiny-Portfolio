@@ -1,8 +1,6 @@
 
 # Ajouter les sorties ici
 
-linebreaks <- function(n){HTML(strrep(br(), n))}
-
 # Importation des dataframes des noms des actions
 dax_ticker_name <- read_csv("./data/dax_tickers_names.csv")
 nikkei_ticker_name <- read_csv("./data/nikkei_tickers_names.csv")
