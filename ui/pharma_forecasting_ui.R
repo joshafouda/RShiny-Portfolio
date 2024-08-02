@@ -10,7 +10,7 @@ liste_tabitems <- append(liste_tabitems, list(
       
       # Thème
       # themeSelector(),
-      theme = shinytheme("cyborg"),
+      #theme = shinytheme("cyborg"),
       
       # Pour centrer les textes de h1 et h4
       tags$head(
@@ -24,7 +24,8 @@ liste_tabitems <- append(liste_tabitems, list(
       # Titre de l'application
       h1("Forecaster Web App", style = "font-family: 'Jura'; 
      color: red; font-size: 80px;"),
-      h3(tags$b("R Shiny web application for forecasting the Sales Revenue or the Quantity of Products in a pharmacy.")),
+      h3(tags$b("R Shiny web application for forecasting the Sales Revenue or the Quantity of Products in a pharmacy."), 
+      style = "font-family: 'Jura'; color: green;"),
       br(),
       h4(tags$a("Author : Josué AFOUDA", 
                 href = 'https://www.linkedin.com/in/josu%C3%A9-afouda/')),

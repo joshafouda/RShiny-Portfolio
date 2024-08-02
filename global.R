@@ -12,7 +12,19 @@ library(TSstudio)
 library(lubridate)
 library(forecast)
 library(prophet)
-library(shinythemes)
+#library(shinythemes)
+
+#library(tidyverse)
+library(stringr)
+#library(shinythemes)
+library(quantmod)
+library(readr)
+
+library(factoextra)
+library(Rtsne)
+
+library(caret)
+
 
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
@@ -42,6 +54,23 @@ liste_menuitems <- append(liste_menuitems, list(
 liste_menuitems <- append(liste_menuitems, list(
   menuItem("Pharmaceutical Forecasting", tabName = "tabItem_pharma_forecasting", icon = icon("medkit"))
 ), after = length(liste_menuitems))
+
+# Ajout d'un nouveau menuItem pour "Quantitative Analysis App"
+liste_menuitems <- append(liste_menuitems, list(
+  menuItem("Quantitative Analysis App", tabName = "tabItem_quant_analysis", icon = icon("chart-line"))
+), after = length(liste_menuitems))
+
+# Ajout d'un nouveau menuItem pour "Dimensionality Reduction App"
+liste_menuitems <- append(liste_menuitems, list(
+  menuItem("Dimensionality Reduction App", tabName = "tabItem_dim_reduction", icon = icon("compress-arrows-alt"))
+), after = length(liste_menuitems))
+
+# Ajout d'un nouveau menuItem pour "Credit Scoring App"
+liste_menuitems <- append(liste_menuitems, list(
+  menuItem("Credit Scoring App", tabName = "tabItem_credit_scoring", icon = icon("file-invoice-dollar"))
+), after = length(liste_menuitems))
+
+
 
 
 # Source ui files
