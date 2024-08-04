@@ -1,25 +1,25 @@
 
 # Ajouter les sorties ici
 
+model <- readRDS('data/credit_scoring_rf_model.rds')
+
+new_data <- reactive({
+  data.frame(
+    "person_age" = input$var1,
+    "person_income" = input$var2,
+    "person_home_ownership" = input$var3,
+    "person_emp_length" = input$var4,
+    "loan_intent" = input$var5,
+    "loan_grade" = input$var6,
+    "loan_amnt" = input$var7,
+    "loan_int_rate" = input$var8,
+    "loan_percent_income" = input$var9,
+    "cb_person_default_on_file" = input$var10,
+    "cb_person_cred_hist_length" = input$var11
+  )
+})
+
 observeEvent(input$go, {
-  model <- readRDS('data/credit_scoring_rf_model.rds')
-  
-  new_data <- reactive({
-    data.frame(
-      "person_age" = input$var1,
-      "person_income" = input$var2,
-      "person_home_ownership" = input$var3,
-      "person_emp_length" = input$var4,
-      "loan_intent" = input$var5,
-      "loan_grade" = input$var6,
-      "loan_amnt" = input$var7,
-      "loan_int_rate" = input$var8,
-      "loan_percent_income" = input$var9,
-      "cb_person_default_on_file" = input$var10,
-      "cb_person_cred_hist_length" = input$var11
-    )
-  })
-  
   
   prediction <- reactive({
     predict(model, newdata = new_data())
@@ -40,7 +40,7 @@ observeEvent(input$go, {
     ifelse(prediction() == "0", "green", "red")
   })
   
-  
+
   output$score_prediction <- renderValueBox({
     
     valueBox(

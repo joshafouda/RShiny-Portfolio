@@ -23,6 +23,8 @@ library(readr)
 library(factoextra)
 library(Rtsne)
 
+library(caret)
+
 library(rvest)
 library(zoo)
 library(xts)

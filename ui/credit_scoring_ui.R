@@ -6,7 +6,7 @@ nom_tab <- "tabItem_credit_scoring"
 liste_tabitems <- append(liste_tabitems, list(
   tabItem(
     tabName = nom_tab, # identification interne du panneau
-    fluidRow(box(valueBoxOutput("score_prediction")),
+    fluidRow(box(valueBoxOutput("score_prediction", width = 12)),
              box(numericInput("var1", label = "Age du demandeur de credit", 
                               value = 20, min = 18))),
     
