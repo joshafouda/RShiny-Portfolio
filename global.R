@@ -17,8 +17,8 @@ library(stringr)
 library(quantmod)
 library(readr)
 
-library(factoextra)
-library(Rtsne)
+# library(factoextra)
+# library(Rtsne)
 
 library(caret)
 
