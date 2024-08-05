@@ -1,7 +1,7 @@
 
 # Ajouter les sorties ici
 
-observeEvent(input$go, {
+#observeEvent(input$go, {
   
   # Create a connection from the URL
   url_model_connection <- url("https://raw.githubusercontent.com/joshafouda/data_formations/main/credit_scoring_rf_model.rds", "rb")
@@ -58,4 +58,4 @@ observeEvent(input$go, {
     )
     
   })
-})
+#})

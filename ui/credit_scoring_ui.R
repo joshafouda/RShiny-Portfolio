@@ -13,8 +13,6 @@ liste_tabitems <- append(liste_tabitems, list(
              box(numericInput("var1", label = "Age du demandeur de credit", 
                               value = 20, min = 18))),
     
-    # fluidRow(tableOutput("new_table")),
-    
     fluidRow(box(numericInput("var2", label = "Revenu annuel demandeur de credit", 
                               value = 10000, min = 0)),
              box(selectInput("var3", 
@@ -48,16 +46,16 @@ liste_tabitems <- append(liste_tabitems, list(
                               label = "Echéance des crédits en cours (en nombre d'années)", 
                               value = 5, min = 0))),
     
-    br(),
+    #br(),
     
-    fluidRow(
-      actionButton(
-        "go",
-        "Calculate the Credit Score",
-        class = "btn btn-primary btn-lg", # Bootstrap classes for styling
-        style = "color: white; background-color: #007BFF; border-color: #007BFF; margin-top: 20px; padding: 10px 20px;"
-      )
-    )
+    # fluidRow(
+    #   actionButton(
+    #     "go",
+    #     "Calculate the Credit Score",
+    #     class = "btn btn-primary btn-lg", # Bootstrap classes for styling
+    #     style = "color: white; background-color: #007BFF; border-color: #007BFF; margin-top: 20px; padding: 10px 20px;"
+    #   )
+    # )
     
   )), after = 4)
 
