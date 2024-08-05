@@ -12,11 +12,8 @@ library(TSstudio)
 library(lubridate)
 library(forecast)
 library(prophet)
-#library(shinythemes)
 
-#library(tidyverse)
 library(stringr)
-#library(shinythemes)
 library(quantmod)
 library(readr)
 
@@ -62,36 +59,6 @@ liste_menuitems <- append(liste_menuitems, list(
   )
 ), after = length(liste_menuitems))
 
-# Ajout d'un nouveau menuItem pour "Pharmaceutical Forecasting"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Pharmaceutical Forecasting", tabName = "tabItem_pharma_forecasting", icon = icon("medkit"))
-# ), after = length(liste_menuitems))
-
-# Ajout d'un nouveau menuItem pour "Quantitative Analysis App"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Quantitative Analysis App", tabName = "tabItem_quant_analysis", icon = icon("chart-line"))
-# ), after = length(liste_menuitems))
-
-# Ajout d'un nouveau menuItem pour "Dimensionality Reduction App"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Dimensionality Reduction App", tabName = "tabItem_dim_reduction", icon = icon("compress-arrows-alt"))
-# ), after = length(liste_menuitems))
-
-# Ajout d'un nouveau menuItem pour "Credit Scoring App"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Credit Scoring App", tabName = "tabItem_credit_scoring", icon = icon("file-invoice-dollar"))
-# ), after = length(liste_menuitems))
-
-# Add a new menuItem for "Portfolio Optimization"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Portfolio Optimization App", tabName = "tabItem_portfolio_optimization", icon = icon("balance-scale"))
-# ), after = length(liste_menuitems))
-
-# Add a new menuItem for "Airbnb Business Dashboard"
-# liste_menuitems <- append(liste_menuitems, list(
-#   menuItem("Airbnb Business Dashboard", tabName = "tabItem_airbnb_dashboard", icon = icon("home"))
-# ), after = length(liste_menuitems))
-
 
 # Source ui files
 v_fichiersUI <- list.files(path = "ui", pattern = "\\.R$", full.names = TRUE)
@@ -102,6 +69,7 @@ for (fichierUI in v_fichiersUI) {
 
 app_title = "My R Shiny Portfolio"
 
+# Header
 header <- dashboardHeader(
   title = app_title,
   tags$li(
@@ -115,12 +83,16 @@ header <- dashboardHeader(
   )
 )
 
+# Sidebar
 sidebar <- dashboardSidebar(do.call(sidebarMenu, liste_menuitems))
 
+# Body
 body <- dashboardBody(do.call(tabItems, liste_tabitems))
 
+# User Interface
 ui <- dashboardPage(header, sidebar, body)
 
+# Server
 server <- function(input, output, session) {
   liste_servers <- list.files(path = "server", pattern = "\\.R$", full.names = TRUE)
 
