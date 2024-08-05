@@ -3,6 +3,9 @@ linebreaks <- function(n){HTML(strrep(br(), n))}
 # identification interne tabItem (ne pas modifier)
 nom_tab <- "tabItem_portfolio_optimization"
 
+# Ajout menu ITEM
+liste_menuitems <- append(liste_menuitems, list(menuItem("Portfolio Optimization App", tabName = nom_tab, icon = icon("balance-scale"))), after = 5)
+
 # Ajout TABITEM avec contenu du panneau
 liste_tabitems <- append(liste_tabitems, list(
   tabItem(
@@ -138,5 +141,5 @@ liste_tabitems <- append(liste_tabitems, list(
                 )
       )
     )
-  )), after = length(liste_tabitems))
+  )), after = 5)
 

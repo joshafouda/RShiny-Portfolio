@@ -3,7 +3,7 @@
 nom_tab <- "tabItem_about_me"
 
 # Ajout menu ITEM
-liste_menuitems <- append(liste_menuitems, list(menuItem("About Me", tabName = nom_tab, icon = icon("user-circle"))), after = length(liste_menuitems))
+liste_menuitems <- append(liste_menuitems, list(menuItem("About Me", tabName = nom_tab, icon = icon("user-circle"))), after = 0)
 
 # Ajout TABITEM avec contenu du panneau
 liste_tabitems <- append(liste_tabitems, list(
@@ -65,5 +65,5 @@ liste_tabitems <- append(liste_tabitems, list(
         )
       )
     )
-  )), after = length(liste_menuitems))
+  )), after = 0)
 

@@ -2,6 +2,9 @@
 # identification interne tabItem (ne pas modifier)
 nom_tab <- "tabItem_dim_reduction"
 
+# Ajout menu ITEM
+liste_menuitems <- append(liste_menuitems, list(menuItem("Dimensionality Reduction App", tabName = nom_tab, icon = icon("compress-arrows-alt"))), after = 3)
+
 # Ajout TABITEM avec contenu du panneau
 liste_tabitems <- append(liste_tabitems, list(
   tabItem(
@@ -104,5 +107,5 @@ liste_tabitems <- append(liste_tabitems, list(
         )
       )
     )
-  )), after = length(liste_tabitems))
+  )), after = 3)
 

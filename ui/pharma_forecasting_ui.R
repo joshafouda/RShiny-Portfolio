@@ -2,6 +2,9 @@
 # identification interne tabItem (ne pas modifier)
 nom_tab <- "tabItem_pharma_forecasting"
 
+# Ajout menu ITEM
+liste_menuitems <- append(liste_menuitems, list(menuItem("Pharmaceutical Forecasting", tabName = nom_tab, icon = icon("medkit"))), after = 1)
+
 # Ajout TABITEM avec contenu du panneau
 liste_tabitems <- append(liste_tabitems, list(
   tabItem(
@@ -89,5 +92,5 @@ liste_tabitems <- append(liste_tabitems, list(
                       DTOutput("forecastdata")))
       
     )
-  )), after = length(liste_tabitems))
+  )), after = 1)
 

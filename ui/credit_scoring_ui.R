@@ -2,6 +2,9 @@
 # identification interne tabItem (ne pas modifier)
 nom_tab <- "tabItem_credit_scoring"
 
+# Ajout menu ITEM
+liste_menuitems <- append(liste_menuitems, list(menuItem("Credit Scoring App", tabName = nom_tab, icon = icon("file-invoice-dollar"))), after = 4)
+
 # Ajout TABITEM avec contenu du panneau
 liste_tabitems <- append(liste_tabitems, list(
   tabItem(
@@ -56,5 +59,5 @@ liste_tabitems <- append(liste_tabitems, list(
       )
     )
     
-  )), after = length(liste_tabitems))
+  )), after = 4)
 
