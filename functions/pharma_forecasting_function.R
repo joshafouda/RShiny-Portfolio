@@ -1,8 +1,15 @@
 
 # Ajouter les fonctions spécifiques à l'application ici
 
-# Importation des données
-productdb <- readRDS("data/productdb.rds")
+# Create a connection from the URL
+url_connection <- url("https://raw.githubusercontent.com/joshafouda/data_formations/main/productdb.rds", "rb")
+
+# Read the RDS file from the URL
+productdb <- readRDS(url_connection)
+
+# Close the connection
+close(url_connection)
+
 
 # Médicaments les plus prescrits en terme de quantité
 productdb2 <- productdb %>%
