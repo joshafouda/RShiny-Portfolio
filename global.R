@@ -20,7 +20,7 @@ library(readr)
 # library(factoextra)
 # library(Rtsne)
 
-library(caret)
+# library(caret)
 
 library(rvest)
 library(zoo)
@@ -34,6 +34,9 @@ library(leaflet)
 library(shinyjs)
 library(shinyBS)
 library(shinyWidgets)
+
+library(sf)
+library(maps)
 
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
