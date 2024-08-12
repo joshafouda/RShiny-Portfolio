@@ -38,6 +38,8 @@ library(shinyWidgets)
 library(sf)
 library(maps)
 
+library(highcharter)
+
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
 for (fichierFunction in liste_functions) {
