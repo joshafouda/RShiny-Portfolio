@@ -49,15 +49,15 @@ output$TotalEmployees <- renderValueBox({
 })
 
 output$ActiveEmployees <- renderValueBox({
-  valueBox(total_active_employees, "Active Employees", icon = icon("users"))
+  valueBox(total_active_employees, "Active Employees", icon = icon("users"), color = "green")
 })
 
 output$InactiveEmployees <- renderValueBox({
-  valueBox(total_inactive_employees, "Inactive Employees", icon = icon("walking"))
+  valueBox(total_inactive_employees, "Inactive Employees", icon = icon("walking"), color = "red")
 })
 
 output$GloablAttritionRate <- renderValueBox({
-  valueBox(paste(round(attrition_rate, 2), "%"), "Gloabl Attrition Rate", icon = icon("percent"))
+  valueBox(paste(round(attrition_rate, 2), "%"), "Gloabl Attrition Rate", icon = icon("percent"), color = "purple")
 })
 
 # EmployeeHiringTrends
@@ -192,7 +192,7 @@ output$EmployeesByAgeAndGender <- renderPlotly({
     group_by(AgeGroup, Gender) %>%
     summarise(Count = n(), .groups = 'drop') %>%
     arrange(AgeGroup)
-  
+
   # Plotting the bar chart
   plot_ly(age_gender_distribution, x = ~Count, y = ~AgeGroup,
                   color = ~Gender, type = 'bar', orientation = 'h') %>%
@@ -407,7 +407,7 @@ output$ManagerRating <- renderPlotly({
 ################################## Attrition ###############################################
 
 output$GlobalAttrition2 <- renderValueBox({
-  valueBox(paste(round(attrition_rate, 2), "%"), "% Attrition Rate", icon = icon("percent"))
+  valueBox(paste(round(attrition_rate, 2), "%"), "% Attrition Rate", icon = icon("percent"), color = "purple")
 })
 
 output$AttritionByDepartJob <- renderPlotly({
