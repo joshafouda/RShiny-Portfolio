@@ -1616,24 +1616,3 @@ plot_procedure_los
 plot_procedure_readmission
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Autre cours a suivre pour construire un autre dashboard :
-# https://campus.datacamp.com/courses/introduction-to-financial-statements-in-power-bi/company-performance-and-financial-analysis?ex=4
-
-
-# https://app.datacamp.com/learn/courses/analyzing-us-census-data-in-python
-
-# https://app.datacamp.com/learn/courses/analyzing-survey-data-in-r
