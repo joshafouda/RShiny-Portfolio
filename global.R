@@ -40,6 +40,8 @@ library(maps)
 
 library(highcharter)
 
+library(markdown)
+
 # Source function files
 liste_functions <- list.files(path = "functions", pattern = "\\.R$", full.names = TRUE)
 for (fichierFunction in liste_functions) {

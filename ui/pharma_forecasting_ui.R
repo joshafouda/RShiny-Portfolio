@@ -36,60 +36,71 @@ liste_tabitems <- append(liste_tabitems, list(
       h4(tags$a("Learn R Shiny",href='https://youtu.be/4XGI_ye0y4M?si=_i7Zcpg91s8XavfU')),
       
       br(),
-      
-      fluidRow(column(12, wellPanel(
-        radioButtons(
-          "forecastmetric",
-          label = "Forecasting Metric",
-          choices = c("Sales Revenue", "Quantity"),
-          inline = TRUE
-        )
-      ))), 
-      
-      fluidRow(column(2, wellPanel(
-        selectizeInput("categ", 
-                    label = "Categorie Name", 
-                    choices = unique(productdb$CHEMSUB))
-      )),
-      column(10, wellPanel(plotlyOutput("top5plot")))), 
-      
-      # fluidRow(column(12, wellPanel(uiOutput('ProductControl')))),
-      
-      fluidRow(column(
-        2,
-        wellPanel(
-          selectizeInput("prods", 
-                      label = "Product Name", 
-                      choices = unique(productdb$BNFNAME)),
-          br(),
-          checkboxInput("decompose", label = "Decompose ETS", value = TRUE),
-          br(),
-          selectInput(
-            "forecastmodel",
-            label = "Forecasting Model",
-            choices = c(
-              "ETS" = "auto",
-              "Holt-Winters" = "hw",
-              "TBATS" =
-                "tbats",
-              "Auto ARIMA" = "autoarima",
-              "Facebook Prophet" =
-                "fbpro"
+      tabsetPanel(
+        tabPanel(
+          "The App",
+          icon = icon("cogs"),
+          fluidRow(column(12, wellPanel(
+            radioButtons(
+              "forecastmetric",
+              label = "Forecasting Metric",
+              choices = c("Sales Revenue", "Quantity"),
+              inline = TRUE
             )
-          )
+          ))), 
+          
+          fluidRow(column(2, wellPanel(
+            selectizeInput("categ", 
+                           label = "Categorie Name", 
+                           choices = unique(productdb$CHEMSUB))
+          )),
+          column(10, wellPanel(plotlyOutput("top5plot")))), 
+          
+          # fluidRow(column(12, wellPanel(uiOutput('ProductControl')))),
+          
+          fluidRow(column(
+            2,
+            wellPanel(
+              selectizeInput("prods", 
+                             label = "Product Name", 
+                             choices = unique(productdb$BNFNAME)),
+              br(),
+              checkboxInput("decompose", label = "Decompose ETS", value = TRUE),
+              br(),
+              selectInput(
+                "forecastmodel",
+                label = "Forecasting Model",
+                choices = c(
+                  "ETS" = "auto",
+                  "Holt-Winters" = "hw",
+                  "TBATS" =
+                    "tbats",
+                  "Auto ARIMA" = "autoarima",
+                  "Facebook Prophet" =
+                    "fbpro"
+                )
+              )
+            )
+          ),
+          column(5, plotlyOutput("actual_ts")),
+          column(5, plotOutput("autoplotforecast"))), 
+          
+          fluidRow(column(12, 
+                          numericInput(
+                            "horizon", 
+                            label = "Horizon of Prevision",
+                            value = 6,
+                            min = 1
+                          ),
+                          DTOutput("forecastdata")))
+        ),
+        tabPanel(
+          "Read Me",
+          icon = icon("book-open"),
+          includeMarkdown("./readme/pharma_forecasting.md")
         )
-      ),
-      column(5, plotlyOutput("actual_ts")),
-      column(5, plotOutput("autoplotforecast"))), 
+      )
       
-      fluidRow(column(12, 
-                      numericInput(
-                        "horizon", 
-                        label = "Horizon of Prevision",
-                        value = 6,
-                        min = 1
-                      ),
-                      DTOutput("forecastdata")))
       
     )
   )), after = 1)
