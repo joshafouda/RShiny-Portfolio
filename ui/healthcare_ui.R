@@ -127,6 +127,11 @@ liste_tabitems <- append(liste_tabitems, list(
                           )
                    )
                  )
+        ),
+        tabPanel(
+          "Read Me",
+          icon = icon("book-open"),
+          includeMarkdown("./readme/healthcare_dashboard.md")
         )
       )
     )

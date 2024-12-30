@@ -53,6 +53,11 @@ liste_tabitems <- append(liste_tabitems, list(
                                     status = "primary", solidHeader = TRUE, plotlyOutput("ams_price_chart", height = "450px")))
                    )
                  )
+        ),
+        tabPanel(
+          "Read Me",
+          icon = icon("book-open"),
+          includeMarkdown("./readme/airbnb_dashboard.md")
         )
       )
     )

@@ -141,6 +141,11 @@ liste_tabitems <- append(liste_tabitems, list(
                    plotlyOutput("AttritionByTenure", height = "250px"))
              )
           )
+        ),
+        tabPanel(
+          "Read Me",
+          icon = icon("book-open"),
+          includeMarkdown("./readme/hr_analytics_dashboard.md")
         )
       )
     )
