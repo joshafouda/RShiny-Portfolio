@@ -1,5 +1,7 @@
 # RShiny Portfolio Dashboard
 
+![myrshinyportfolio](https://github.com/user-attachments/assets/83fb8002-fb76-4f8c-a2f9-acec3ca0c9d7)
+
 Welcome to my **RShiny Portfolio**, an advanced, multi-application dashboard built with the **shinydashboard** framework. This project is designed to showcase my expertise in developing scalable and impactful data-driven applications using R. Each menu represents a standalone application or dashboard, meticulously crafted to provide interactive and insightful solutions for various domains.
 
 ---
