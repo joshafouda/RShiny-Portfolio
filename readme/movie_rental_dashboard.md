@@ -125,8 +125,8 @@ Include representative screenshots for each sub-dashboard to illustrate key feat
 ---
 
 ## Author
-**[Your Name]**
-[LinkedIn](https://www.linkedin.com/)
+
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 
 ---
 

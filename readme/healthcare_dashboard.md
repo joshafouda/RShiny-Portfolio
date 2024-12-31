@@ -78,32 +78,10 @@ The **Healthcare Dashboard** is an R Shiny application designed to analyze and v
   - `plotly`
   - `DT`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Install the required R packages:
-   ```R
-   install.packages(c("shiny", "dplyr", "plotly", "DT"))
-   ```
-
-3. Run the application:
-   ```R
-   shiny::runApp("path-to-app")
-   ```
 
 ## Author
-**[Your Name]**
-[LinkedIn](https://www.linkedin.com/)
 
-## Screenshots
-### Hospital Profile Analysis
-![Hospital Profile Screenshot](path/to/screenshot1.png)
-
-### LOS and Cost Comparison
-![LOS and Cost Comparison Screenshot](path/to/screenshot2.png)
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 
 ## Conclusion
 The **Healthcare Dashboard** is a powerful tool for analyzing hospital performance and patient outcomes. It demonstrates advanced data visualization, R Shiny development, and healthcare data analysis skills. Whether you're a healthcare administrator, analyst, or researcher, this application provides actionable insights for improving healthcare delivery. Feel free to reach out for collaboration or inquiries!

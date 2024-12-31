@@ -94,32 +94,10 @@ The **HR Analytics Dashboard** is an advanced R Shiny application that provides 
   - `plotly`
   - `highcharter`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Install the required R packages:
-   ```R
-   install.packages(c("shiny", "dplyr", "plotly", "highcharter"))
-   ```
-
-3. Run the application:
-   ```R
-   shiny::runApp("path-to-app")
-   ```
-
 ## Author
-**[Your Name]**
-[LinkedIn](https://www.linkedin.com/)
 
-## Screenshots
-### Overview Tab
-![Overview Screenshot](path/to/screenshot1.png)
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 
-### Performance Tracker
-![Performance Tracker Screenshot](path/to/screenshot2.png)
 
 ## Conclusion
 The **HR Analytics Dashboard** empowers HR teams with actionable insights into workforce trends, performance, and attrition. This dashboard showcases advanced data visualization, interactive analytics, and robust R programming skills. Feel free to reach out for collaboration or inquiries!

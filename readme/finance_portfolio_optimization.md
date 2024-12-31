@@ -80,36 +80,11 @@ The **Portfolio Optimization Dashboard** is an advanced R Shiny application desi
   - `zoo`
   - `tseries`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Install the required R packages:
-   ```R
-   install.packages(c("shiny", "PerformanceAnalytics", "quantmod", "DT", "zoo", "tseries"))
-   ```
-
-3. Run the application:
-   ```R
-   shiny::runApp("path-to-app")
-   ```
 
 ## Author
-**Josué AFOUDA**
-[LinkedIn](https://www.linkedin.com/in/josu%C3%A9-afouda/)
+
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 [Support My Work](https://www.paypal.me/aaajosue)
-
-## Screenshots
-### Portfolio Analysis
-![Portfolio Analysis Screenshot](path/to/screenshot1.png)
-
-### Price and Return Visualization
-![Price and Return Screenshot](path/to/screenshot2.png)
-
-### Optimization Results
-![Optimization Results Screenshot](path/to/screenshot3.png)
 
 ## Conclusion
 The **Portfolio Optimization Dashboard** is a robust tool for financial analysis and portfolio management. It showcases expertise in R programming, Shiny app development, and financial modeling. Whether you're an investor, analyst, or researcher, this application provides valuable insights and tools for decision-making. Feel free to reach out for collaboration or inquiries!

@@ -79,36 +79,12 @@ The server logic processes user inputs and dynamically updates outputs. Key comp
   - `plotly`
   - `DT`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Install the required R packages:
-   ```R
-   install.packages(c("shiny", "shinydashboard", "quantmod", "ggplot2", "plotly", "DT"))
-   ```
-
-3. Run the application:
-   ```R
-   shiny::runApp("path-to-app")
-   ```
 
 ## Author
 **Josué AFOUDA**  
-[LinkedIn](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 [Learn R Shiny](https://youtube.com/playlist?list=PLmJWMf9F8euStJ32KHOThQzJ7hub-JXA0)
 
-## Screenshots
-### Dashboard Overview
-![Dashboard Screenshot](path/to/screenshot1.png)
-
-### Line Chart Analysis
-![Line Chart Screenshot](path/to/screenshot2.png)
-
-### Boxplot and Histogram
-![Boxplot Screenshot](path/to/screenshot3.png)
 
 ## Conclusion
 This application demonstrates my advanced capabilities in financial data analysis, R programming, and dashboard development. It is an excellent showcase of technical skills and a valuable tool for investors, analysts, and financial enthusiasts.

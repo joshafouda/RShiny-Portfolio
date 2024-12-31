@@ -70,23 +70,6 @@ The server logic:
 6. **Set Horizon**: Adjust the forecast horizon (number of months).
 7. **View Results**: Explore interactive plots and data tables.
 
-## Screenshots
-
-*(Add screenshots of the application here, showcasing the UI and results.)*
-
-## Deployment
-
-To deploy this app:
-
-1. Ensure all necessary libraries are installed:
-   ```R
-   install.packages(c("shiny", "shinydashboard", "plotly", "DT", "forecast", "prophet"))
-   ```
-2. Load the application in your R environment:
-   ```R
-   shiny::runApp("path_to_app_folder")
-   ```
-3. Access the app in your browser at the specified local host.
 
 ## About the Author
 

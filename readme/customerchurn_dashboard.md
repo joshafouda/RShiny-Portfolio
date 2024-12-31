@@ -75,35 +75,9 @@ The server processes inputs and dynamically generates outputs:
   - `sf`
   - `readr`
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   ```
-
-2. Install the required R packages:
-   ```R
-   install.packages(c("shiny", "dplyr", "plotly", "leaflet", "ggplot2", "sf", "readr"))
-   ```
-
-3. Run the application:
-   ```R
-   shiny::runApp("path-to-app")
-   ```
-
 ## Author
-**[Your Name]**
-[LinkedIn](https://www.linkedin.com/)
 
-## Screenshots
-### Dashboard Overview
-![Dashboard Screenshot](path/to/screenshot1.png)
-
-### Churn Analysis
-![Churn Analysis Screenshot](path/to/screenshot2.png)
-
-### Geospatial Insights
-![Geospatial Insights Screenshot](path/to/screenshot3.png)
+[Josué A.](https://www.linkedin.com/in/josu%C3%A9-afouda/)  
 
 ## Conclusion
 The **Customer Churn Dashboard** is a powerful tool for identifying trends and patterns in customer churn. It demonstrates proficiency in data visualization, geospatial analysis, and dashboard development. This project is a great example of using R Shiny for actionable business insights.
